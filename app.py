@@ -60,7 +60,7 @@ def makeWebhookResult(req):
     database = db.reference()
     database1 = database.child("push")
     database1.update({
-       "test" : "2"
+       "test" : "3"
     })
     return "berhasil"
         
