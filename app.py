@@ -31,7 +31,7 @@ firebase_admin.initialize_app(cred,{
 # Flask app should start in global layout
 app = Flask(__name__)
 
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['GET'])
 
 
 def webhook():
