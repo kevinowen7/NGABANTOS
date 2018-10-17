@@ -62,7 +62,7 @@ def makeWebhookResult(req):
     database1.update({
        "test" : "3"
     })
-    driver = webdriver.Chrome();
+    driver = webdriver.PhantomJS();
     driver.get('https://akademik.ithb.ac.id/default.php?mod=roster%20ruangan')
     soup = BeautifulSoup(driver.page_source,'html.parser')
     return soup
