@@ -56,7 +56,8 @@ def webhook():
 
 
 
-def makeWebhookResult(req):  
+def makeWebhookResult(req): 
+    database = db.reference()
     driver = webdriver.PhantomJs();
     driver.get('https://akademik.ithb.ac.id/default.php?mod=roster%20ruangan')
     tgl = 10
@@ -71,7 +72,7 @@ def makeWebhookResult(req):
     select = Select(driver.find_element_by_name("lantai"))
     select.select_by_value(str(lt))
     driver.find_element_by_name("cmd").click()
-    return "a"
+
     database1 = database.child("2017/"+str(bulan)+"/"+str(tgl)+"/lantai:"+str(lt))
     soup = BeautifulSoup(driver.page_source,'html.parser')
     x = soup.find_all("tbody")
