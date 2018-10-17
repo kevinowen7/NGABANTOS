@@ -58,7 +58,7 @@ def webhook():
 
 def makeWebhookResult(req): 
     database = db.reference()
-    driver = webdriver.PhantomJs();
+    driver = webdriver.PhantomJS();
     driver.get('https://akademik.ithb.ac.id/default.php?mod=roster%20ruangan')
     tgl = 10
     bulan = 10
