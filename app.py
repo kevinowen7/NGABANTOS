@@ -65,7 +65,7 @@ def makeWebhookResult(req):
     driver = webdriver.PhantomJS();
     driver.get('https://akademik.ithb.ac.id/default.php?mod=roster%20ruangan')
     soup = BeautifulSoup(driver.page_source,'html.parser')
-    return soup
+    return "sukses"
         
         
 if __name__ == '__main__':
