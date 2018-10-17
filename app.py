@@ -62,17 +62,10 @@ def makeWebhookResult(req):
     database1.update({
        "test" : "2"
     })
-    return {
-       "test" : "2"
-    }
+    return "berhasil"
         
         
 if __name__ == '__main__':
-    database = db.reference()
-    database1 = database.child("push")
-    database1.update({
-       "test" : "2"
-    })
     port = int(os.getenv('PORT', 4040))
 
     print ("Starting app on port %d" %(port))
