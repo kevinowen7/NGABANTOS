@@ -67,11 +67,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil,
-            "displayText": hasil,
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
         }
     
     if req.get("result").get("action") == "bibit": 
@@ -92,11 +92,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil,
-            "displayText": hasil,
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
         }
     
     if req.get("result").get("action") == "peralatan": 
@@ -117,11 +117,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil,
-            "displayText": hasil,
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
         }
     
     
