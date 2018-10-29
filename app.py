@@ -49,11 +49,10 @@ def webhook():
 
 def makeWebhookResult(req):   
     #push user id to firebase
-    userid = req.get("originalRequest")
     database = db.reference()
     userp = database.child("user")
     userp.update({
-        "name" : userid
+        "name" : req
     })
     
     if req.get("result").get("action") == "pupuk": 
