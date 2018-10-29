@@ -50,11 +50,11 @@ def webhook():
 def makeWebhookResult(req): 
     if req.get("result").get("action") == "pupuk": 
         return {
-            "speech": hasil,
-            "displayText": hasil,
+            "speech": "a",
+            "displayText": "a",
             #"data": {},
             #"contextOut": [],
-            "source": hasil
+            "source": "a"
         }
     
         database = db.reference()
