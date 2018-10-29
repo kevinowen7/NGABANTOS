@@ -73,6 +73,30 @@ def makeWebhookResult(req):
             "source": hasil
         }
     
+    if req.get("result").get("action") == "peralatan": 
+        database = db.reference()
+        pupuk = database.child("Bandung/harga/peralatan")
+        jenisp=[]
+        hargap=[]
+        snapshot = pupuk.order_by_key().get()
+        for key, val in snapshot.items():
+            jenisp.append(key);
+            hargap.append(val);
+        
+        
+        x=0
+        hasil=""
+        for i in jenisp:
+            hasil = hasil + i +" "+hargap[x]+"\n\n"
+            x=x+1
+
+        return {
+            "speech": hasil,
+            "displayText": hasil,
+            #"data": {},
+            #"contextOut": [],
+            "source": hasil
+        }
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
 
