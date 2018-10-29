@@ -49,6 +49,14 @@ def webhook():
 
 def makeWebhookResult(req): 
     if req.get("result").get("action") == "pupuk": 
+        return {
+            "speech": hasil,
+            "displayText": hasil,
+            #"data": {},
+            #"contextOut": [],
+            "source": hasil
+        }
+    
         database = db.reference()
         pupuk = database.child("Bandung/harga/pupuk")
         jenisp=[]
