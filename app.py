@@ -25,7 +25,7 @@ from flask import make_response
 # firebase
 cred = credentials.Certificate("./ngabantos-database.json")
 firebase_admin.initialize_app(cred,{
-    'databaseURL' : 'https://ngabantos-30dc9.firebaseio.com/'
+    'databaseURL' : "https://ngabantos-30dc9.firebaseio.com"
 })
 
 # Flask app should start in global layout
