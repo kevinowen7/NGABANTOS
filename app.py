@@ -57,13 +57,8 @@ def makeWebhookResult(req):
         for key, val in snapshot.items():
             jenisp.append(key);
             hargap.append(val);
-        return {
-            "speech": "a",
-            "displayText": "a",
-            #"data": {},
-            #"contextOut": [],
-            "source": "a"
-        }
+        
+        
         x=0
         hasil=""
         for i in jenisp:
