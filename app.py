@@ -73,12 +73,12 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-                "speech": hasil,
-                "displayText": hasil,
-                #"data": {},
-                #"contextOut": [],
-                "source": hasil
-            }
+            "speech": hasil,
+            "displayText": hasil,
+            #"data": {},
+            #"contextOut": [],
+            "source": hasil
+        }
     
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
