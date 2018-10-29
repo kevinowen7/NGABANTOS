@@ -39,15 +39,6 @@ def webhook():
     res = makeWebhookResult(req)  
     
     res = json.dumps(res, indent=4)
-    print(res)
-    res2 = {
-            "speech": "tgl2",
-            "displayText": "tgl2",
-            #"data": {},
-            #"contextOut": [],
-            "source": "tgl2"
-        }
-    
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     
@@ -66,10 +57,17 @@ def makeWebhookResult(req):
         for key, val in snapshot.items():
             jenisp.append(key);
             hargap.append(val);
+        return {
+            "speech": "a",
+            "displayText": "a",
+            #"data": {},
+            #"contextOut": [],
+            "source": "a"
+        }
         x=0
         hasil=""
         for i in jenisp:
-            hasil = hasil + i +" "+hargap[x]+"\n\n"
+            hasil = hasil + i +" "+hargap[x]+"\n"
             x=x+1
 
         return {
