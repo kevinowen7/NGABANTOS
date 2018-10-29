@@ -47,13 +47,7 @@ def webhook():
 
 
 
-def makeWebhookResult(req):   
-    #push user id to firebase
-    database = db.reference()
-    userp = database.child("user")
-    userp.update({
-        "name" : req
-    })
+def makeWebhookResult(req):
     
     if req.get("result").get("action") == "pupuk": 
         database = db.reference()
