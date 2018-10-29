@@ -129,7 +129,7 @@ def makeWebhookResult(req):
         database = db.reference()
         userp = database.child("Bandung").child("Saran")
         userp.push({
-            "S" : str(aa)
+            "Saran" : str(aa)
         })
         return {
             "speech": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
