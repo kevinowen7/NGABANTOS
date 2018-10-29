@@ -73,7 +73,7 @@ def makeWebhookResult(req):
             "source": hasil
         }
     
-    if req.get("result").get("action") == "peralatan": 
+    else:
         database = db.reference()
         peralatan = database.child("Bandung/harga/peralatan")
         jenispe=[]
@@ -97,6 +97,7 @@ def makeWebhookResult(req):
             #"contextOut": [],
             "source": hasil
         }
+    
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
 
