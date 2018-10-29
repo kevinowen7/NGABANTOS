@@ -73,7 +73,7 @@ def makeWebhookResult(req):
             "source": hasil
         }
     
-    else:
+    elif req.get("result").get("action") == "peralatan": 
         database = db.reference()
         peralatan = database.child("Bandung/harga/peralatan")
         jenispe=[]
