@@ -48,9 +48,17 @@ def webhook():
 
 
 def makeWebhookResult(req):   
-    if req.get("result").get("action") == "peralatan": 
+    userid = req.get("originalRequest").get("data").get("source").get("userid")
+    profile = line_bot_api.get_profile(userid)
+    database = db.reference()
+    userp = database.child("user").child("userid")
+    userp.update({
+        "name" : profile.display_name
+    })
+    
+    if req.get("result").get("action") == "pupuk": 
         database = db.reference()
-        pupuk = database.child("Bandung/harga/peralatan")
+        pupuk = database.child("Bandung/harga/pupuk")
         jenisp=[]
         hargap=[]
         snapshot = pupuk.order_by_key().get()
@@ -72,9 +80,35 @@ def makeWebhookResult(req):
             #"contextOut": [],
             "source": hasil
         }
-    if req.get("result").get("action") == "pupuk": 
+    
+    if req.get("result").get("action") == "bibit": 
         database = db.reference()
-        pupuk = database.child("Bandung/harga/pupuk")
+        pupuk = database.child("Bandung/harga/bibit")
+        jenisp=[]
+        hargap=[]
+        snapshot = pupuk.order_by_key().get()
+        for key, val in snapshot.items():
+            jenisp.append(key);
+            hargap.append(val);
+        
+        
+        x=0
+        hasil=""
+        for i in jenisp:
+            hasil = hasil + i +" "+hargap[x]+"\n\n"
+            x=x+1
+
+        return {
+            "speech": hasil,
+            "displayText": hasil,
+            #"data": {},
+            #"contextOut": [],
+            "source": hasil
+        }
+    
+    if req.get("result").get("action") == "peralatan": 
+        database = db.reference()
+        pupuk = database.child("Bandung/harga/peralatan")
         jenisp=[]
         hargap=[]
         snapshot = pupuk.order_by_key().get()
