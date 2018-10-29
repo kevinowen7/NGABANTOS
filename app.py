@@ -124,6 +124,20 @@ def makeWebhookResult(req):
             "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
         }
     
+    if req.get("result").get("action") == "saranbener": 
+        aa = req.get("result").get("resolvedQuery")
+        database = db.reference()
+        userp = database.child("Bandung").child("Saran")
+        userp.update({
+            "Saran" : aa
+        })
+        return {
+            "speech": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
+            "displayText": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
+            #"data": {},
+            #"contextOut": [],
+            "source": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) " "
+        }
     
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 4040))
