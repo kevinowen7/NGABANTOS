@@ -136,7 +136,7 @@ def makeWebhookResult(req):
             "displayText": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) " "
+            "source": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) " 
         }
     
 if __name__ == '__main__':
