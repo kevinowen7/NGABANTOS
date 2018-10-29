@@ -25,13 +25,13 @@ from flask import make_response
 # firebase
 cred = credentials.Certificate("./serviceAccountKey.json")
 firebase_admin.initialize_app(cred,{
-    'databaseURL' : 'https://ithbtest.firebaseio.com'
+    'databaseURL' : 'https://ngabantos-30dc9.firebaseio.com/'
 })
 
 # Flask app should start in global layout
 app = Flask(__name__)
 
-@app.route('/webhook', methods=['GET'])
+@app.route('/webhook', methods=['POST'])
 
 
 def webhook():
