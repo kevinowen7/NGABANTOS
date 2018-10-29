@@ -62,7 +62,7 @@ def makeWebhookResult(req):
         x=0
         hasil=""
         for i in jenisp:
-            hasil = hasil + i +" "+hargap[x]+"\n"
+            hasil = hasil + i +" "+hargap[x]+"\n\n"
             x=x+1
 
         return {
