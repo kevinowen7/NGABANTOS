@@ -75,19 +75,19 @@ def makeWebhookResult(req):
     
     if req.get("result").get("action") == "peralatan": 
         database = db.reference()
-        pupuk = database.child("Bandung/harga/peralatan")
-        jenisp=[]
-        hargap=[]
-        snapshot = pupuk.order_by_key().get()
+        peralatan = database.child("Bandung/harga/peralatan")
+        jenispe=[]
+        hargape=[]
+        snapshot = peralatan.order_by_key().get()
         for key, val in snapshot.items():
-            jenisp.append(key);
-            hargap.append(val);
+            jenispe.append(key);
+            hargape.append(val);
         
         
         x=0
         hasil=""
-        for i in jenisp:
-            hasil = hasil + i +" "+hargap[x]+"\n\n"
+        for i in jenispe:
+            hasil = hasil + i +" "+hargape[x]+"\n\n"
             x=x+1
 
         return {
