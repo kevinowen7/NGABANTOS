@@ -48,13 +48,7 @@ def webhook():
 
 
 def makeWebhookResult(req):   
-    userid = req.get("originalRequest")
-    database = db.reference()
-    userp = database.child("user")
-    userp.update({
-        userid
-    })
-    
+ 
     if req.get("result").get("action") == "pupuk": 
         database = db.reference()
         pupuk = database.child("Bandung/harga/pupuk")
