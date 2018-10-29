@@ -128,7 +128,7 @@ def makeWebhookResult(req):
         aa = req.get("result").get("resolvedQuery")
         database = db.reference()
         userp = database.child("Bandung").child("Saran")
-        userp.update({
+        userp.push({
             "Saran" : aa
         })
         return {
