@@ -48,12 +48,11 @@ def webhook():
 
 
 def makeWebhookResult(req):   
-    userid = req.get("originalRequest").get("data").get("source").get("userid")
-    profile = line_bot_api.get_profile(userid)
+    userid = req.get("originalRequest")
     database = db.reference()
-    userp = database.child("user").child("userid")
+    userp = database.child("user")
     userp.update({
-        "name" : profile.display_name
+        userid
     })
     
     if req.get("result").get("action") == "pupuk": 
