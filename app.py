@@ -68,11 +68,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
-            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) "
         }
     
     if req.get("result").get("action") == "bibit": 
@@ -93,11 +93,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
-            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) "
         }
     
     if req.get("result").get("action") == "peralatan": 
@@ -118,11 +118,11 @@ def makeWebhookResult(req):
             x=x+1
 
         return {
-            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
-            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) ",
+            "speech": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
+            "displayText": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) :) "
+            "source": hasil+"\n \n Terima Kasih telah bertanya ke Mila \n :) :) "
         }
     
     if req.get("result").get("action") == "saranbener": 
@@ -133,11 +133,11 @@ def makeWebhookResult(req):
             "Saran" : str(aa)
         })
         return {
-            "speech": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
-            "displayText": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) ",
+            "speech": "\n Terima Kasih telah memberi saran ke Mila \n :) :) ",
+            "displayText": "\n Terima Kasih telah memberi saran ke Mila \n :) :) ",
             #"data": {},
             #"contextOut": [],
-            "source": "\n Terima Kasih telah memberi saran ke Mila \n :) :) :) " 
+            "source": "\n Terima Kasih telah memberi saran ke Mila \n :) :) " 
         }
     
 if __name__ == '__main__':
